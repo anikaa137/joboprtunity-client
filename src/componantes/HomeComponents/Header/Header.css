@@ -1,0 +1,18 @@
+.header-banner{
+    background-color: #fef8ff;
+}
+.banner-title{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 58px;
+    font-weight: 400;
+    color: #222222;
+    /* padding-top: 145px; */
+}
+.banner-text p {
+    font-family: 'Arimo', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #222222;
+    padding-top: 15px;
+    margin-bottom: 190px;
+}

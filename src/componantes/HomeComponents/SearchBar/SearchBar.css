@@ -1,0 +1,14 @@
+.searchBar{
+    background-color: aliceblue;
+
+}
+.search-submit-button{
+    border: 0px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    padding: 7px 28px;
+    background-image: linear-gradient(to right, #00b8ef, #58d2f5);
+    border-radius: 0px;
+}
