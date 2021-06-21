@@ -57,7 +57,9 @@ const Addpost = () => {
                    <Sidebar/>
                 </div>
                 <div className="col-md-9">
-                    <form onSubmit={handleSubmit(onSubmit)} className="row g-2 mt-5 p-5">
+                <h2 class="text-center">Add a post</h2>
+                    <form onSubmit={handleSubmit(onSubmit)} className="row g-2 mt-3 p-5">
+
                         <div class="col-6">
                             <label for="inputname" class="form-label">
                                  Employ Name

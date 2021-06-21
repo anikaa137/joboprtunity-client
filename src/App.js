@@ -18,6 +18,7 @@ import EmployPaymentCard from "./componantes/LogInComponent/EmployLoginComponent
 import EmployForm from "./componantes/LogInComponent/EmployLoginComponent/EmployForm/EmployForm";
 import JobDetailes from "./componantes/HomeComponents/JobDetailes/JobDetailes";
 import Sidebar from "./componantes/LogInComponent/ShareComponent/Sidebar/Sidebar";
+import PrivateRoute from "./componantes/LogInComponent/ShareComponent/Login/PrivateRoute";
 
 export const UserContext = createContext()
 
@@ -35,9 +36,9 @@ function App() {
             <Route  path="/welcome">
             <Welcome/>
             </Route>
-            <Route path="/home">
+            <PrivateRoute path="/home">
            <Home/>
-          </ Route>
+          </PrivateRoute>
           <Route path="/add_post">
           <Addpost/>
           </Route>

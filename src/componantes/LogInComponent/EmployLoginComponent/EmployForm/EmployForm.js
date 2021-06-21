@@ -155,7 +155,11 @@ function EmployForm() {
     // console.log(user);
 
     return (
-        <div calss="">
+        <div class="container">
+
+                <div class="mx-auto">
+                    <img src="http://themesitem.com/demos/html/jobortunity/jobortunity/images/home-page-logo.png"class="mx-auto"alt="" /></div>
+
             <div class="row g-3">
                 <Form onSubmit={handleSubmit}>
                     <h1 class="mt-5">
@@ -218,7 +222,7 @@ function EmployForm() {
                         <button
                             onClick={googleSignIn}
                             type="button"
-                            class="btn btn-outline-success"
+                            class="btn btn-outline-success mt-5"
                         >
                             <FontAwesomeIcon icon={''} />
                             <span class="p-4">Continue with Google</span>
@@ -235,6 +239,7 @@ function EmployForm() {
             ) : (
                 <h5 style={{ color: "red" }}> {user.error}</h5>
             )}
+
         </div>
     )
 }
