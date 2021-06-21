@@ -5,7 +5,7 @@ function Header() {
     return (
         <div class="header-banner">
         <div class="container">
-            <div class="row g-5 mt-2 ">
+            <div class="row g-5 ">
 
                 <div class="col-md-7 mt-5">
 

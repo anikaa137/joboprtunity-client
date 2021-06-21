@@ -6,7 +6,7 @@ import {
   Route,
 
 } from "react-router-dom";
-import PrivateRoute from "./componantes/LogInComponent/ShareComponent/Login/PrivateRoute"
+
 import GetStart from './componantes/GetStart/GetStart'
 import Welcome from './componantes/Welcome/Welcome'
 import Login from "./componantes/LogInComponent/ShareComponent/Login/Login"
@@ -16,6 +16,8 @@ import Addpost from "./componantes/EmployComponents/AddPost/Addpost";
 import JobList from "./componantes/HomeComponents/JobList/JobList";
 import EmployPaymentCard from "./componantes/LogInComponent/EmployLoginComponent/EmployPaymentCard/EmployPaymentCard";
 import EmployForm from "./componantes/LogInComponent/EmployLoginComponent/EmployForm/EmployForm";
+import JobDetailes from "./componantes/HomeComponents/JobDetailes/JobDetailes";
+import Sidebar from "./componantes/LogInComponent/ShareComponent/Sidebar/Sidebar";
 
 export const UserContext = createContext()
 
@@ -26,20 +28,6 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
      <Router>
       <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav> */}
-
         <Switch>
           <Route exact path="/">
             <GetStart/>
@@ -47,9 +35,9 @@ function App() {
             <Route  path="/welcome">
             <Welcome/>
             </Route>
-            <PrivateRoute path="/home">
+            <Route path="/home">
            <Home/>
-          </PrivateRoute>
+          </ Route>
           <Route path="/add_post">
           <Addpost/>
           </Route>
@@ -68,6 +56,13 @@ function App() {
             <Route  path="/login">
              <Login/>
             </Route>
+            <Route path="/dashbord">
+              <Sidebar/>
+            </Route>
+            <Route path="/view_job/:id">
+             <JobDetailes/>
+            </Route>
+
         </Switch>
       </div>
     </Router>

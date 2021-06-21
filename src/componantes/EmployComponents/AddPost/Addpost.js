@@ -3,7 +3,7 @@ import "./AddPost.css"
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { UserContext } from '../../../App';
-import Sidebar from '../../LogInComponent/ShareComponent/Sidebar/Sidebar'
+import Sidebar from "../../LogInComponent/ShareComponent/Sidebar/Sidebar"
 
 const Addpost = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -12,28 +12,18 @@ const Addpost = () => {
 
     const onSubmit = (data, e) => {
         console.log(data);
-        const eventDta = {
-            displayName: data.displayName,
-            companyName: data.companyName,
-            detailes: data.detailes,
-            title: data.title,
-            location: data.location,
-            type: data.type,
-            Skill: data.Skill,
-            jobDetailes: data.jobDetailes,
-            imageURL: imageURL,
-            date: new Date().toLocaleDateString()
+        const newData = { ...loggedInUser };
+        newData.jobInfo = data;
+        newData.status = "pending";
+        setLoggedInUser(newData);
 
-        };
-        setLoggedInUser(eventDta)
-         console.log(eventDta)
         const url = `http://localhost:5000/addJob`;
         fetch(url, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
             },
-            body: JSON.stringify(eventDta),
+            body: JSON.stringify(loggedInUser),
         }).then((res) => res.json())
             .then((res) => {
                 if (res) {

@@ -1,0 +1,19 @@
+.gatstart{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSsIEJt_QRSwCPG7sMP7ZSY5qq3Sj4KV0aCQ&usqp=CAU");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 650px;
+    text-align: left;
+    background-size: cover;
+    overflow: hidden;
+}
+.start-btn{
+    border: 0px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    padding: 7px 28px;
+    background-image: linear-gradient(to right, #00b8ef, #58d2f5);
+    border-radius: 0px;
+}

@@ -38,11 +38,11 @@ const Sidebar = () => {
       <ul className="list-unstyled">
         <li>
           <Link className="text-brand text-decoration-none" to="/">
-          <img src="https://ld-prestashop.template-help.com/prestashop_eze_256/img/remodia-logo-1596624527.jpg" alt="" />
+          <img src="http://themesitem.com/demos/html/jobortunity/jobortunity/images/home-page-logo.png" alt="" />
           </Link>
         </li>
         <li>
-          <Link to="/" className="text-brand text-decoration-none text-white">
+          <Link to="/home" className="text-brand text-decoration-none text-white">
             <FontAwesomeIcon icon={faHome} /> <span>Home</span>
           </Link>
         </li>
