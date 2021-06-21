@@ -14,7 +14,7 @@ function JobDetailes() {
     const [viewjob, setViewJob] = useState({});
 console.log(viewjob)
 useEffect(() => {
-    fetch(`http://localhost:5000/ViewJobs/${id}`)
+    fetch(`https://shielded-mesa-68080.herokuapp.com/ViewJobs/${id}`)
         .then(res => res.json())
         .then(data => setViewJob(data))
 }, [id])

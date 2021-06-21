@@ -8,7 +8,7 @@ function JobList() {
     const [jobslist, setJoblist] = useState([]);
     console.log(jobslist)
     useEffect(() => {
-        fetch("http://localhost:5000/joblist")
+        fetch("https://shielded-mesa-68080.herokuapp.com/joblist")
             .then((res) => res.json())
             .then((data) =>setJoblist(data));
     }, [setJoblist]);

@@ -36,7 +36,7 @@ const SimplePayment = () => {
       setPaymentSuccess(paymentMethod.id);
 
       if (paymentMethod.id) {
-        fetch(`http://localhost:5000/employPaymet`, {
+        fetch(`https://shielded-mesa-68080.herokuapp.com/employPaymet`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

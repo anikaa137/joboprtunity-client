@@ -17,7 +17,7 @@ const Addpost = () => {
         newData.status = "pending";
         setLoggedInUser(newData);
 
-        const url = `http://localhost:5000/addJob`;
+        const url = `https://shielded-mesa-68080.herokuapp.com/addJob`;
         fetch(url, {
             method: "POST",
             headers: {
