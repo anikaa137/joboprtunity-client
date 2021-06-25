@@ -71,7 +71,7 @@ function EmployForm() {
                     // console.log(user.name);
                     updateUserName(user.name);
                     setLoggedInUser(newUserInfo);
-                    history.replace(from);
+                     history.push(`/payment`);
                 })
                 .catch((error) => {
                     const errorMessage = error.message;

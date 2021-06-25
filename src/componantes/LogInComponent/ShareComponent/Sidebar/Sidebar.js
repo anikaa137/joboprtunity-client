@@ -53,42 +53,13 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link  to="/addReview" className="text-brand text-decoration-none text-white">
+          <Link  to="/add_post" className="text-brand text-decoration-none text-white">
             <FontAwesomeIcon icon={faAddressBook} /> <span>Add Post</span>
           </Link>
         </li>
 
           <div>
-            {/* <li>
-              <Link
-                to="/allBookings"
-                className="text-brand text-decoration-none text-white"
-              >
-                <FontAwesomeIcon icon={faCalendar} /> <span>All Job Post</span>
-              </Link>
-            </li> */}
-            <li>
-              <Link
-                to="/addService"
-                className="text-brand text-decoration-none text-white"
-              >
-                <FontAwesomeIcon icon={faUsers} /> <span>Add Service</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/makeAdmin" className="text-brand text-decoration-none text-white">
-                <FontAwesomeIcon icon={faFileAlt} /> <span>Make Admin</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/manageService"
-                className="text-brand text-decoration-none text-white"
-              >
-                <FontAwesomeIcon icon={faUserPlus} />{" "}
-                <span>Manage Service</span>
-              </Link>
-            </li>
+
           </div>
 
         <li>

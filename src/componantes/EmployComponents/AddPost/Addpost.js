@@ -12,18 +12,28 @@ const Addpost = () => {
 
     const onSubmit = (data, e) => {
         console.log(data);
-        const newData = { ...loggedInUser };
-        newData.jobInfo = data;
-        newData.status = "pending";
-        setLoggedInUser(newData);
+        const eventDta = {
+            displayName: data.displayName,
+            companyName: data.companyName,
+            detailes: data.detailes,
+            title: data.title,
+            location: data.location,
+            type: data.type,
+            Skill: data.Skill,
+            jobDetailes: data.jobDetailes,
+            imageURL: imageURL,
+            date: new Date().toLocaleDateString()
 
-        const url = "https://shielded-mesa-68080.herokuapp.com/addJob";
+        };
+        setLoggedInUser(eventDta)
+         console.log(eventDta)
+        const url = `http://localhost:5000/addJob`;
         fetch(url, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
             },
-            body: JSON.stringify(loggedInUser),
+            body: JSON.stringify(eventDta),
         }).then((res) => res.json())
             .then((res) => {
                 if (res) {

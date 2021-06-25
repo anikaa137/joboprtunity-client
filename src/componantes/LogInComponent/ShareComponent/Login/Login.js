@@ -1,20 +1,22 @@
+import React from 'react'
 import firebase from "firebase/app";
 import "firebase/auth";
 import { useContext, useState } from "react";
 import { useHistory, useLocation } from "react-router";
 
 import { Form, Button } from "react-bootstrap";
+// import firebaseConfig from "./firebase.config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { UserContext } from "../../../../App";
-import firebaseConfig from "./firebase.config";
+import { UserContext } from '../../../../App';
+import firebaseConfig from '../../ShareComponent/Login/firebase.config';
+
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 
-
-const Login = () => {
+function Login() {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     let history = useHistory();
     let location = useLocation();
@@ -151,38 +153,44 @@ const Login = () => {
     };
 
     // console.log(user);
+
     return (
-        <div calss="">
+        <div class="container">
+
+                <div class="mx-auto">
+                    <img src="http://themesitem.com/demos/html/jobortunity/jobortunity/images/home-page-logo.png"class="mx-auto"alt="" /></div>
+
             <div class="row g-3">
                 <Form onSubmit={handleSubmit}>
                     <h1 class="mt-5">
-                        {newUser ?  <h5>create an account</h5> :  <h5>Log In</h5> }
+                        {newUser ? <h5>create an account</h5> : <h5>Log In</h5>}
                     </h1>{" "}
                     <br />
                     <div>
-                    {newUser && (      <div class="mb-3 col-md-4">
-                   <label for="name" class="form-label">Your name</label>
-                  <input type="text" class="form-control" name="name"  onBlur={handleBlur}  placeholder="Your Name" required/>
-</div>)}
+                        {newUser && (<div class="mb-3 col-md-4">
+                            <label for="name" class="form-label">Your name</label>
+                            <input type="text" class="form-control" name="name" onBlur={handleBlur} placeholder="Your Name" required />
+                        </div>)}
 
                     </div>
-                                        <div class="mb-3 col-md-4">
-  <label for="email" class="form-label">Email</label>
-  <input type="email" class="form-control"  name="email"  onBlur={handleBlur} placeholder="your email" required/>
-</div>
+                    <div class="mb-3 col-md-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" onBlur={handleBlur} placeholder="your email" required />
+                    </div>
 
 
-<div class="mb-3 col-md-4">
-  <label for="password" class="form-label">password</label>
-  <input type="password" class="form-control"  name="password"  onBlur={handleBlur} placeholder="password" required/>
-</div>
+                    <div class="mb-3 col-md-4">
+                        <label for="password" class="form-label">password</label>
+                        <input type="password" class="form-control" name="password" onBlur={handleBlur} placeholder="password" required />
+                    </div>
 
 
-                        {newUser && (
-                            <div class="mb-3 col-md-4">
+
+                    {newUser && (
+                        <div class="mb-3 col-md-4">
                             <label for="password" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control"  name="confirm_password"  onBlur={handleBlur} placeholder="confirm_password" required/>
-                          </div>
+                            <input type="password" class="form-control" name="confirm_password" onBlur={handleBlur} placeholder="confirm_password" required />
+                        </div>
 
                     )}
 
@@ -214,7 +222,7 @@ const Login = () => {
                         <button
                             onClick={googleSignIn}
                             type="button"
-                            class="btn btn-outline-success"
+                            class="btn btn-outline-success mt-5"
                         >
                             <FontAwesomeIcon icon={''} />
                             <span class="p-4">Continue with Google</span>
@@ -231,9 +239,9 @@ const Login = () => {
             ) : (
                 <h5 style={{ color: "red" }}> {user.error}</h5>
             )}
-        </div>
-    );
 
-};
+        </div>
+    )
+}
 
 export default Login;
