@@ -6,7 +6,7 @@ function JobCard({ jobs }) {
   let history = useHistory();
 
   const  jobHandler = (id) => {
-      history.push(`/view_job/${id}`);
+      history.push(`/ViewJobs/${id}`);
       console.log("click");
   };
 

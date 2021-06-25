@@ -5,7 +5,7 @@ import { useHistory } from "react-router";
 
 function JobDetailes() {
     let history = useHistory();
-    const handleAllpy = () => {
+    const handleApply = () => {
         alert("Your application submitated succefully")
         history.push(`/home`);
     };
@@ -14,7 +14,7 @@ function JobDetailes() {
     const [viewjob, setViewJob] = useState({});
 console.log(viewjob)
 useEffect(() => {
-    fetch(`https://shielded-mesa-68080.herokuapp.com/ViewJobs/${id}`)
+    fetch(`https://shielded-mesa-68080.herokuapp.com/viewJobs/${id}`)
         .then(res => res.json())
         .then(data => setViewJob(data))
 }, [id])
@@ -26,7 +26,7 @@ useEffect(() => {
     <div class="clearfix">
                     <h2>{title}</h2>
                     <h5 class="mt-3 mb-5">{companyName}</h5>
-                    <button class="apply-btn mb-5" onClick={handleAllpy}>APPLY</button>
+                    <button class="apply-btn mb-5" onClick={handleApply}>APPLY</button>
   <img src={imageURL} class="col-md-6 float-md-end mb-3 ms-md-3" alt="..."/>
 
   <p>

@@ -60,7 +60,7 @@ function App() {
             <Route path="/dashbord">
               <Sidebar/>
             </Route>
-            <Route path="/view_job/:id">
+            <Route path="/ViewJobs/:id">
              <JobDetailes/>
             </Route>
 

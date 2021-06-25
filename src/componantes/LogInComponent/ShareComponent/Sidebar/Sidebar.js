@@ -49,24 +49,24 @@ const Sidebar = () => {
         <li>
           <Link to="/bookingList" className="text-brand text-decoration-none text-white">
             <FontAwesomeIcon icon={faAccessibleIcon} />{" "}
-            <span>Booking List</span>
+            <span>Job List</span>
           </Link>
         </li>
         <li>
           <Link  to="/addReview" className="text-brand text-decoration-none text-white">
-            <FontAwesomeIcon icon={faAddressBook} /> <span>Add Review</span>
+            <FontAwesomeIcon icon={faAddressBook} /> <span>Add Post</span>
           </Link>
         </li>
 
           <div>
-            <li>
+            {/* <li>
               <Link
                 to="/allBookings"
                 className="text-brand text-decoration-none text-white"
               >
-                <FontAwesomeIcon icon={faCalendar} /> <span>All Bookings</span>
+                <FontAwesomeIcon icon={faCalendar} /> <span>All Job Post</span>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="/addService"

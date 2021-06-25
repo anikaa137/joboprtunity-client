@@ -7,6 +7,7 @@ import "./JobList.css"
 function JobList() {
     const [jobslist, setJoblist] = useState([]);
     console.log(jobslist)
+
     useEffect(() => {
         fetch("https://shielded-mesa-68080.herokuapp.com/joblist")
             .then((res) => res.json())
